@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather_APP</title>
+    <title>Weather_APP-refactor</title>
     <link rel="stylesheet" href="app.css">
 </head>
 
 <body>
-
     <div id="card" class="card">
-        <div class="search">
+        <div class="search" id="search">
             <input id="inputCity" type="text" placeholder="Entery city name" spellcheck="false">
             <button id="inputBtn"><img src="images/search.png"></button>
         </div>
-        <div class=" error" id="error">
-            <p>Invalid city</p>
-        </div>
-        <div class="weather" id="weather">
+        <div class="weather-hidden" id="weather">
+
             <img id="weatherIcon" src="images/mist.png" class="weather-icon">
+
             <h1 class="temp" id="temp">222°C</h1>
             <h2 class="city" id="city">Athens</h2>
-            <h3 id="currentLocalTime">00:00</h3>
+            <h3>Local time ~ <span id="currentLocalTimeDisplay">00:00</span></h3>
             <div class="details">
                 <div class="col">
                     <img src="images/humidity.png">
@@ -38,8 +36,29 @@
                     </div>
                 </div>
             </div>
+            <div class="sun">
+                <div class="col">
+                    <span id="sunrise">&#9728; </span>
+                    <div>
+                        <p id="sunriseTimeDisplay">00:00</p>
+                        <p>Sunrise</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <span id="sunset">&#9728; </span>
+                    <div>
+                        <p id="sunsetTimeDisplay">00:00</p>
+                        <p>Sunset</p>
+                    </div>
+                </div>
+
+
+
+            </div>
         </div>
+        <div class="error-hidden" id="error">Error: City not found</div>
     </div>
+
 
     <script src="app.js"></script>
 </body>

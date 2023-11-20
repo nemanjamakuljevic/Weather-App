@@ -20,6 +20,14 @@ body {
     text-align: center;
 }
 
+.mode-day {
+    background: linear-gradient(135deg, #2d6a4f, #ffb703);
+}
+
+.mode-night {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(28, 1, 62, 1) 31%, rgba(0, 212, 255, 1) 100%);
+}
+
 .search {
     width: 100%;
     display: flex;
@@ -98,14 +106,33 @@ button {
     margin-top: -5px;
 }
 
-.weather {
+.weather-hidden,
+.error-hidden {
     display: none;
 }
 
 .error {
-    text-align: left;
-    margin-left: 10px;
     font-size: 15px;
-    margin-top: 10px;
-    display: none;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.sun {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col span {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.sunrise,
+.sunset {
+    font-size: 20px;
+    margin-top: -5px;
 }
